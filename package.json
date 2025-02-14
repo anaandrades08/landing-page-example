@@ -1,0 +1,15 @@
+{
+  "name": "landing-page-example",
+  "version": "1.0.0",
+  "description": "Landing Page Example",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve"
+  },
+  "keywords": ["html", "css"],
+  "author": "Ives van Hoorne",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "11.2.0"
+  }
+}
