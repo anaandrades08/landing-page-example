@@ -3,75 +3,103 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing Page Moderna</title>
+    <title>Landing Page Moderna e Acessível</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="logo">Minha Marca</div>
-        <ul class="nav-links">
-          <li><a href="#destaque">Início</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#contato">Contato</a></li>
+    <header role="banner">
+      <nav aria-label="Navegação principal">
+        <div class="logo" aria-label="Minha Marca">Minha Marca</div>
+        <ul class="nav-links" role="menu">
+          <li role="none"><a href="#destaque" role="menuitem">Início</a></li>
+          <li role="none"><a href="#sobre" role="menuitem">Sobre</a></li>
+          <li role="none"><a href="#servicos" role="menuitem">Serviços</a></li>
+          <li role="none"><a href="#contato" role="menuitem">Contato</a></li>
         </ul>
       </nav>
     </header>
 
-    <section id="destaque" class="destaque">
-      <div class="destaque-content">
-        <h1>Transforme seu negócio com nossa solução!</h1>
-        <p>Inovação e tecnologia para levar sua empresa ao próximo nível.</p>
-        <a href="#contato" class="cta-button">Comece Agora</a>
-      </div>
-      <div class="destaque-imagem">
-        <img src="https://picsum.photos/500" alt="Ilustração de negócios" />
-      </div>
-    </section>
-
-    <section id="sobre" class="sobre">
-      <h2>Sobre Nós</h2>
-      <p>
-        Somos uma empresa dedicada a oferecer soluções tecnológicas de ponta
-        para empresas que buscam inovação e crescimento.
-      </p>
-    </section>
-
-    <section id="servicos" class="servicos">
-      <h2>Nossos Serviços</h2>
-      <div class="servicos-grid">
-        <div class="servico">
-          <h3>Consultoria</h3>
-          <p>Estratégias personalizadas para o seu negócio.</p>
+    <main role="main">
+      <section id="destaque" class="destaque" aria-labelledby="titulo-destaque">
+        <div class="destaque-content">
+          <h1 id="titulo-destaque">
+            Transforme seu negócio com nossa solução!
+          </h1>
+          <p>Inovação e tecnologia para levar sua empresa ao próximo nível.</p>
+          <a href="#contato" class="cta-button" aria-label="Comece agora"
+            >Comece Agora</a
+          >
         </div>
-        <div class="servico">
-          <h3>Desenvolvimento</h3>
-          <p>Soluções de software sob medida.</p>
+        <div class="destaque-imagem">
+          <img src="https://picsum.photos/500" alt="Ilustração de negócios" />
         </div>
-        <div class="servico">
-          <h3>Marketing</h3>
-          <p>Campanhas que geram resultados reais.</p>
+      </section>
+
+      <section id="sobre" class="sobre" aria-labelledby="titulo-sobre">
+        <h2 id="titulo-sobre">Sobre Nós</h2>
+        <p>
+          Somos uma empresa dedicada a oferecer soluções tecnológicas de ponta
+          para empresas que buscam inovação e crescimento.
+        </p>
+      </section>
+
+      <section id="servicos" class="servicos" aria-labelledby="titulo-servicos">
+        <h2 id="titulo-servicos">Nossos Serviços</h2>
+        <div class="servicos-grid">
+          <div class="servico" role="article">
+            <h3>Consultoria</h3>
+            <p>Estratégias personalizadas para o seu negócio.</p>
+          </div>
+          <div class="servico" role="article">
+            <h3>Desenvolvimento</h3>
+            <p>Soluções de software sob medida.</p>
+          </div>
+          <div class="servico" role="article">
+            <h3>Marketing</h3>
+            <p>Campanhas que geram resultados reais.</p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="contato" class="contato">
-      <h2>Entre em Contato</h2>
-      <form action="#" method="post">
-        <input type="text" name="nome" placeholder="Seu Nome" required />
-        <input type="email" name="email" placeholder="Seu E-mail" required />
-        <textarea
-          name="mensagem"
-          placeholder="Sua Mensagem"
-          required
-        ></textarea>
-        <button type="submit" class="cta-button">Enviar Mensagem</button>
-      </form>
-    </section>
+      <section id="contato" class="contato" aria-labelledby="titulo-contato">
+        <h2 id="titulo-contato">Entre em Contato</h2>
+        <form action="#" method="post" aria-label="Formulário de contato">
+          <label for="nome">Nome:</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="Seu Nome"
+            required
+            aria-required="true"
+          />
 
-    <footer>
-      <p>&copy; 2023 Minha Marca. Todos os direitos reservados.</p>
+          <label for="email">E-mail:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Seu E-mail"
+            required
+            aria-required="true"
+          />
+
+          <label for="mensagem">Mensagem:</label>
+          <textarea
+            id="mensagem"
+            name="mensagem"
+            placeholder="Sua Mensagem"
+            required
+            aria-required="true"
+          ></textarea>
+
+          <button type="submit" class="cta-button">Enviar Mensagem</button>
+        </form>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
+      <p>&copy; 2025 Minha Marca. Todos os direitos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
