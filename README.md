@@ -1,2 +1,2 @@
 # landing-page-example
-Created with CodeSandbox
+Landing page criada com React, HTML, CSS E JS.
